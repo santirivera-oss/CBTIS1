@@ -50,19 +50,24 @@ header {
   font-size: 1.5rem;
   margin: 10px 0 20px 0;
 }
+/*DISEÑO DE BOTONES*/
+.iconos-redes {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  font-size: 2rem;
+}
 
-/* íconos sociales */
-.social-icons a {
-  color: rgb(0, 0, 0);
-  margin: 0 10px;
-  font-size: 1.5rem;
+.iconos-redes a {
+  color: white;
   text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
 }
 
-.social-icons a:hover {
-  color: #ffcc00;
+.iconos-redes a:hover {
+  color: #ffcc00; /* cambia color al pasar el mouse */
+  transform: scale(1.2);
 }
-
 /* Nivel 2: Menú de navegación superpuesto */
 .header-nav {
   position: absolute;
@@ -176,7 +181,7 @@ section h2 {
   margin-bottom: 40px;
   color: #333;
 }
-
+/*darle el diseño a tarjetas y orden*/
 .info-escolares {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -184,7 +189,7 @@ section h2 {
   max-width: 1200px;
   margin: 0 auto;
 }
-
+/*DISEÑO DE ESCOLARES INICIO*/
 .item-escolar {
   background: white;
   padding: 25px;
@@ -429,6 +434,77 @@ section h2 {
 .puericultura { background: #ff6f61; }    /* Coral cuidado infantil */
 .electronica { background: #2e7d32; }     /* Verde tecnológico */
 
+/*ESCOLARES DISEÑO*/
+/* Contenedor principal de la sección (aislado) */
+.pagina-carreras {
+    padding: 40px 20px;
+    background-color: #f7f9fc;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Título y descripción */
+.pagina-carreras__titulo {
+    font-size: 2.2rem;
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.pagina-carreras__descripcion {
+    font-size: 1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
+
+/* Grid responsivo */
+.pagina-carreras__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Card individual */
+.pagina-carreras__card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.pagina-carreras__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Imagen de la card */
+.pagina-carreras__imagen {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Título y descripción de la card */
+.pagina-carreras__card-titulo {
+    font-size: 1.2rem;
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.pagina-carreras__card-descripcion {
+    font-size: 0.95rem;
+    color: #555;
+    text-align: center;
+    line-height: 1.5;
+}
 
 
 

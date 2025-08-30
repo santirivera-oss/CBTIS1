@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBTIS Institucional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="script.js"></script>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBTIS 1 Fresnillo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+
+<header>
+ <header class="hero-header">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>CBTis 1</h1>
+    <p>Página oficial del plantel</p>
+    <p>📚 Escolares</p>
+    <!-- Íconos de redes -->
+    <div class="iconos-redes">
+      <a href="https://www.facebook.com/profile.php?id=100083165298765"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/cbtis001?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </div>
+</header>
+
+      <!-- Nivel 2: Menú -->
+  <nav class="header-nav">
+    <a href="index.html">🏠 Inicio</a>
+    <a href="direccion.html">📍 Dirección</a>
+    <a href="escolares.html">📚 Escolares</a>
+    <a href="docentes.html">👔 Docentes</a>
+    <a href="administrativa.html">📂 Administrativa</a>
+    <a href="contacto.html">✉️ Contacto</a>
+  </nav>
+    <!-- Menú hamburguesa para móviles -->
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+</header>
+
+</header>
+
+ <main>
+<section class="pagina-carreras">
+    <h2 class="pagina-carreras__titulo">Carreras Disponibles en CBTis 1</h2>
+    <p class="pagina-carreras__descripcion">
+        Descubre nuestras carreras técnicas, diseñadas para brindarte las habilidades y conocimientos necesarios para el mundo profesional. Cada programa combina teoría y práctica, formando estudiantes competentes y preparados para los retos del futuro.
+    </p>
+
+    <div class="pagina-carreras__grid">
+        <div class="pagina-carreras__card">
+            <img src="img/informatica.jpg" alt="Técnico en Informática" class="pagina-carreras__imagen">
+            <h3 class="pagina-carreras__card-titulo">Técnico en Informática</h3>
+            <p class="pagina-carreras__card-descripcion">
+                Aprende programación, soporte técnico y desarrollo de sistemas. Prepárate para trabajar en empresas de tecnología o emprender tus propios proyectos digitales.
+            </p>
+        </div>
+
+        <div class="pagina-carreras__card">
+            <img src="img/contabilidad.jpg" alt="Técnico en Contabilidad" class="pagina-carreras__imagen">
+            <h3 class="pagina-carreras__card-titulo">Técnico en Contabilidad</h3>
+            <p class="pagina-carreras__card-descripcion">
+                Domina la contabilidad, fiscalidad y administración financiera. Ideal para quienes desean integrarse al mundo empresarial con una base sólida y práctica.
+                <span id="mas" style="display: none;">Profundizarás en contabilidad avanzada, auditoría, impuestos y control financiero. La carrera te permite analizar datos económicos, tomar decisiones estratégicas y garantizar la transparencia y eficiencia en organizaciones de cualquier tamaño.</span>
+            </p>
+            <a href="#" id="leer-mas">Leer mas...</a>
+        </div>
+
+       <!--SCRIPT PARA QUE FUNCIONE EL LEER MAS...-->
+        <script>
+  const btn = document.getElementById('leer-mas');
+  const mas = document.getElementById('mas');
+
+  btn.addEventListener('click', function(e){
+    e.preventDefault(); // evita que el enlace recargue la página
+    if (mas.style.display === 'none') {
+      mas.style.display = 'inline';
+      btn.textContent = 'Leer menos';
+    } else {
+      mas.style.display = 'none';
+      btn.textContent = 'Leer más...';
+    }
+  });
+</script>
+
+<style>
+  .seccion-texto {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 400px;
+    border-radius: 5px;
+  }
+
+  #leer-mas {
+    color: #004080;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+
+  #leer-mas:hover {
+    text-decoration: underline;
+  }
+</style>
+
+
+
+
+        <div class="pagina-carreras__card">
+            <img src="https://st.mextudia.com/wp-content/uploads/2025/01/carrera-tecnico-en-electronica.jpg" alt="Técnico en Electrónica" class="pagina-carreras__imagen">
+            <h3 class="pagina-carreras__card-titulo">Técnico en Electrónica</h3>
+            <p class="pagina-carreras__card-descripcion">
+                Especialízate en sistemas electrónicos, mantenimiento y diseño de circuitos. Perfecto para quienes buscan una carrera práctica y altamente demandada.
+            </p>
+
+        </div>
+
+        <div class="pagina-carreras__card">
+            <img src="https://www.tolucatecnm.mx/images/programs/ourservices-121944.1645467584.jpg" alt="Técnico en Mecatrónica" class="pagina-carreras__imagen">
+            <h3 class="pagina-carreras__card-titulo">Técnico en Mecatrónica</h3>
+            <p class="pagina-carreras__card-descripcion">
+                Combina mecánica, electrónica y programación. Ideal para estudiantes innovadores que quieren desarrollar soluciones tecnológicas integrales.
+            </p>
+        </div>
+
+        <div class="pagina-carreras__card">
+            <img src="https://www.ipsantotomas.cl/web/wp-content/uploads/sites/27/2023/10/IP_TEC_MINERIA_METALURGICA_2024.jpg" alt="Técnico en Mineria" class="pagina-carreras__imagen">
+            <h3 class="pagina-carreras__card-titulo">Técnico en Mineria</h3>
+            <p class="pagina-carreras__card-descripcion">
+                Aprenderás geología, perforación, ventilación y seguridad minera, así como el manejo de maquinaria y técnicas de extracción responsables. La carrera te capacita para optimizar procesos, garantizar seguridad laboral y contribuir al desarrollo sostenible de la industria minera.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+
+
+
+<style>
+  .pagina-dev {
+    background-color: #00000014; /* azul marino */
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .pagina-dev:hover {
+    background-color: #6d0f0f; /* un tono más oscuro al pasar el mouse */
+  }
+</style>
+  <!-- FOOTER -->
+  <footer>
+    <!-- Íconos de redes -->
+    <div class="iconos-redes">
+      <a href="https://www.facebook.com/profile.php?id=100083165298765"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/cbtis001?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+    <br><br>
+    <a href="https://santirivera-oss.github.io/Web-Finanzas-E-inversiones" target="_blank" class="pagina-dev">Dev Santiago</a>
+    <br><br>
+    <p>© CBTIS No.001 Fresnillo - Todos los derechos reservados.</p>
+    <br>
+  </footer>
+
+<body>
+    
+</body>
+</html>
