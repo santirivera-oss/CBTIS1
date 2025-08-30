@@ -7,7 +7,7 @@
 
 header {
   font-family: Arial, sans-serif;
-  color: white;
+  color: rgb(0, 0, 0);
   position: relative;
 }
 
@@ -23,6 +23,15 @@ header {
   text-align: center;
   color: white;
 }
+
+  .subtitulo-cbtis {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff; /* tono guinda */
+    text-align: center;
+    letter-spacing: 2px
+  }
 
 /* oscurecer un poco la imagen para que resalten las letras */
 .hero-header .overlay {
@@ -506,6 +515,38 @@ section h2 {
     line-height: 1.5;
 }
 
+/* SECCION DE MISION  Y VISION*/
+.mision-vision-valores {
+  padding: 40px 20px;
+  background: #f7f7f7;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.mision-vision-valores h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #6b0f1a; /* ginda profesional */
+}
+
+.mision-vision-valores .box {
+  margin: 20px auto;
+  max-width: 800px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.mision-vision-valores h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.mision-vision-valores ul {
+  padding-left: 20px;
+}
 
 
 /* FOOTER */
@@ -514,6 +555,7 @@ footer {
   color: white;
   text-align: center;
   padding: 15px;
+  margin-top: 40px;
 }
 /* Menú hamburguesa (solo en móvil) */
 .hamburger {
@@ -543,4 +585,255 @@ footer {
     display: block;
   }
 }
+  /*SECCION DOCENTES*/
+.docentes {
+  padding: 50px 20px;
+  background: #f7f7f7;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
 
+.docentes h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #6b0f1a; /* guinda institucional */
+}
+
+.docentes .intro {
+  max-width: 750px;
+  margin: 0 auto 30px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.docentes .filosofia {
+  background: white;
+  border-left: 5px solid #6b0f1a;
+  padding: 20px;
+  max-width: 750px;
+  margin: 0 auto 40px;
+  font-style: italic;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.categorias {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.categorias h3 {
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.categorias ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.categorias ul li {
+  margin: 8px 0;
+}
+
+.docentes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.card-docente {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.card-docente:hover {
+  transform: translateY(-5px);
+}
+
+.card-docente img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* foto circular */
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.card-docente h3 {
+  margin: 10px 0 5px;
+  color: #6b0f1a;
+}
+
+.card-docente p {
+  margin: 5px 0;
+  font-weight: 500;
+}
+
+.logros {
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.logros h3 {
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.logros ul {
+  padding-left: 20px;
+}
+
+/*ADMINISTRATIVA*/
+.administrativa {
+  padding: 50px 20px;
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.administrativa h2 {
+  text-align: center;
+  color: #6b0f1a;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.administrativa .intro {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.direccion {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.direccion img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.direccion blockquote {
+  font-style: italic;
+  color: #555;
+  margin-top: 15px;
+}
+
+
+.departamentos {
+  margin-bottom: 40px;
+}
+
+.deptos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.deptos-grid .card {
+  background: #f7f7f7;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.tramites ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tramites li {
+  margin: 8px 0;
+}
+
+/*ORGANIGRAMA*/
+.organigrama-profesional {
+  text-align: center;
+  padding: 50px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.organigrama-profesional h2 {
+  color: #6b0f1a;
+  margin-bottom: 40px;
+}
+
+.org-chart {
+  display: flex;
+  justify-content: center;
+}
+
+.org-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 20px;
+}
+
+.node {
+  background: #6b0f1a;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  min-width: 180px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.162);
+}
+
+.org-children {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  position: relative;
+}
+
+.org-children::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  background: #6b0f1a;
+}
+
+.org-children .org-node::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  width: 2px;
+  height: 20px;
+  background: #6b0f1a;
+}
+
+.org-children .org-node:not(:first-child)::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -50%;
+  width: 100%;
+  height: 2px;
+  background: #6b0f1a;
+}
+
+.org-node .cargo {
+  color: white; /* Todos los títulos/cargos en blanco en el organigrama */
+  margin-bottom: 40px;
+}
