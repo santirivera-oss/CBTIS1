@@ -675,6 +675,8 @@ footer {
   font-weight: 500;
 }
 
+
+/*LOGROS STYLE*/
 .logros {
   background: #fff;
   padding: 25px;
@@ -762,18 +764,30 @@ footer {
   margin: 8px 0;
 }
 
-/*ORGANIGRAMA*/
 .organigrama-profesional {
+  padding: 40px 20px;
   text-align: center;
-  padding: 50px 20px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .organigrama-profesional h2 {
-  color: #6b0f1a;
-  margin-bottom: 40px;
+  font-size: 28px;
+  color: #800000;
+  margin-bottom: 30px;
+  position: relative;
 }
 
+.organigrama-profesional h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #800000;
+  margin: 10px auto 0;
+  border-radius: 3px;
+}
+
+/* Estructura principal */
 .org-chart {
   display: flex;
   justify-content: center;
@@ -783,57 +797,198 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
   margin: 20px;
 }
 
 .node {
-  background: #6b0f1a;
+  background: #800000;
   color: white;
   padding: 15px 20px;
-  border-radius: 8px;
-  min-width: 180px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, background 0.3s ease;
+  min-width: 220px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.162);
 }
 
+.node:hover {
+  transform: scale(1.05);
+  background: #a00000;
+}
+
+.node h3, .node h4, .node h5 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.node .cargo {
+  font-size: 14px;
+  color: #f1f1f1;
+  margin-top: 5px;
+}
+
+/* Conexiones entre nodos */
 .org-children {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* ✅ permite que se ajuste en pantallas pequeñas */
+}
+
+.org-children .org-node {
+  margin: 15px;
   position: relative;
 }
 
-.org-children::before {
-  content: '';
+/* Líneas (en escritorio) */
+.org-node .org-children::before {
+  content: "";
   position: absolute;
-  top: 0;
+  top: -20px;
   left: 50%;
   width: 2px;
   height: 20px;
-  background: #6b0f1a;
+  background: #ccc;
+  transform: translateX(-50%);
 }
 
 .org-children .org-node::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -20px;
+  left: 50%;
   width: 2px;
   height: 20px;
-  background: #6b0f1a;
+  background: #ccc;
+  transform: translateX(-50%);
 }
 
-.org-children .org-node:not(:first-child)::after {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: -50%;
-  width: 100%;
-  height: 2px;
-  background: #6b0f1a;
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .org-children {
+    flex-direction: column; /* ✅ pasa a vertical en tablets */
+    align-items: center;
+  }
+
+  .org-children .org-node {
+    margin: 10px 0;
+  }
 }
 
-.org-node .cargo {
-  color: white; /* Todos los títulos/cargos en blanco en el organigrama */
+@media (max-width: 600px) {
+  .node {
+    min-width: 180px;
+    padding: 12px 15px;
+  }
+
+  .organigrama-profesional h2 {
+    font-size: 22px;
+  }
+}
+
+
+/*CONTACTO STYLE*/
+.contacto {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.contacto h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #6b0f1a; /* Guinda institucional */
+}
+
+.contacto .intro {
   margin-bottom: 40px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.contacto-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contacto-form, 
+.contacto-info {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+
+.contacto-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.btn-enviar {
+  background: #6b0f1a;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background: #8c1c28;
+}
+
+.contacto-info h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.contacto-info p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.social {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.social img {
+  width: 30px;
+  transition: transform 0.3s;
+}
+
+.social img:hover {
+  transform: scale(1.2);
 }

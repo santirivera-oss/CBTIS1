@@ -1,3 +1,15 @@
+<?php
+
+    $servidor = "localhost";
+    $usuario = "root";
+    $clave = "";
+    $bd = "cbtis1";
+
+    $coneccion = mysqli_connect ($servidor, $usuario, $clave, $bd );
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -28,7 +40,7 @@
   <div class="overlay"></div>
   <div class="hero-content">
     <h1>CBTis 1</h1>
-    <p>👔 Docentes</p>
+    <p>✉️ Contacto</p>
     <!-- Íconos de redes -->
     <div class="iconos-redes">
       <a href="https://www.facebook.com/profile.php?id=100083165298765"><i class="fa-brands fa-facebook-f"></i></a>
@@ -45,7 +57,7 @@
     <a href="escolares.html">📚 Escolares</a>
     <a href="docentes.html">👔 Docentes</a>
     <a href="administrativa.html">📂 Administrativa</a>
-    <a href="index.php">✉️ Contacto</a>
+    <a href="contacto.html">✉️ Contacto</a>
   </nav>
     <!-- Menú hamburguesa para móviles -->
   <div class="hamburger" onclick="toggleMenu()">☰</div>
@@ -54,94 +66,62 @@
 </header>
 
 <main>
+  <!-- SECCIÓN DE CONTACTO -->
+<section class="contacto" id="contacto">
+  <h2>Contáctanos</h2>
+  <p class="intro">
+    Estamos aquí para resolver tus dudas. Escríbenos o visítanos en nuestras instalaciones.
+  </p>
 
-<!-- ================= DOCENTES ================= -->
-<section class="docentes">
-  <div class="container">
-    
-    <!-- 1. Presentación general -->
-    <h2>Nuestros Docentes</h2>
-    <p class="intro">
-      El cuerpo docente del CBTis 1 está conformado por profesionales altamente capacitados,
-      comprometidos con la enseñanza tecnológica y la formación integral de nuestros estudiantes.
-    </p>
+  <div class="contacto-contenedor">
+    <!-- Formulario -->
+    <div class="contacto-form">
+      <form action="#" method="POST" name="ejemplo">
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+        </div>
 
-    <!-- 2. Filosofía docente -->
-    <div class="filosofia">
-      <blockquote>
-        “Nuestro equipo docente fomenta el pensamiento crítico, la innovación y los valores que
-        forman ciudadanos responsables.”
-      </blockquote>
+        <div class="form-group">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="Ejemplo: alumno@correo.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar" name="enviar">Enviar</button>
+      </form>
     </div>
 
-    <!-- 3. Categorías por área -->
-    <div class="categorias">
-      <h3>Áreas Académicas</h3>
-      <ul>
-        <li>📘 Ciencias Básicas</li>
-        <li>💼 Ciencias Económico-Administrativas</li>
-        <li>⚒ Minería y Tecnologías</li>
-        <li>🌱 Formación Humana y Valores</li>
-      </ul>
-    </div>
+    <!-- Información de contacto -->
+    <div class="contacto-info">
+      <h3>Datos de contacto</h3>
+      <p><strong>Dirección:</strong> C. Magisterio 23, Tecnologica, 99020 Fresnillo, Zac</p>
+      <p><strong>Teléfono:</strong> (493) 932 6715</p>
+      <p><strong>Correo:</strong> cbtis001.orientacion@dgeti.sems.gob.mx</p>
+      <p><strong>Horario:</strong> Lunes a Viernes, 8:00 AM - 8:00 PM</p>
 
-    <!-- 4. Listado / galería de docentes -->
-    <div class="docentes-grid">
-      <div class="card-docente">
-        <img src="img/docente1.jpg" alt="Docente 1">
-        <h3>Prof. Juan Pérez</h3>
-        <p>Matemáticas Aplicadas</p>
-        <small>Maestría en Ciencias</small>
-      </div>
-
-      <div class="card-docente">
-        <img src="img/docente2.jpg" alt="Docente 2">
-        <h3>Mtra. Ana López</h3>
-        <p>Contabilidad</p>
-        <small>Lic. en Administración</small>
-      </div>
-
-      <div class="card-docente">
-        <img src="img/docente3.jpg" alt="Docente 3">
-        <h3>Ing. Carlos Ramírez</h3>
-        <p>Tecnología en Minería</p>
-        <small>Ingeniero Geólogo</small>
-      </div>
-    
-
-    <div class="card-docente">
-        <img src="img/docente4.jpg" alt="Docente 3">
-        <h3>Ing.  Ramon Lopez</h3>
-        <p>Tecnología en Ofimatica</p>
-        <small>Ingeniero </small>
-      </div>
-    
-    <div class="card-docente">
-        <img src="img/docente5.jpg" alt="Docente 5">
-        <h3>Ing. Carlos Ramírez</h3>
-        <p>Tecnología en Minería</p>
-        <small>Ingeniero Geólogo</small>
+      <!-- Redes sociales -->
+      <div class="social">
+        <a href="https://www.facebook.com/profile.php?id=100083165298765"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/cbtis001?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+        <a href="https://wa.me/4939326715"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
       </div>
     </div>
-
-    <!-- 5. Reconocimientos y logros -->
-    <div class="logros">
-      <h3>Reconocimientos Destacados</h3>
-      <ul>
-        <li>🏆 Profesor Juan Pérez – Reconocimiento Nacional de Matemáticas 2023.</li>
-        <li>🌍 Mtra. Ana López – Coordinadora de proyectos de emprendimiento estudiantil.</li>
-        <li>🔬 Ing. Carlos Ramírez – Participación en proyectos de investigación minera.</li>
-      </ul>
-    </div>
-
   </div>
 </section>
+
+
+
 
 
 </main>
 
 
-<!-- STYLE (DISEÑO) DEL FOOTER-->
+
 <style>
   .pagina-dev {
     background-color: #00000014; /* azul marino */
@@ -164,7 +144,7 @@
       <a href="https://wa.me/4939326715"><i class="fa-brands fa-whatsapp"></i></a>
     </div>
     <br><br>
-    <a href="https://www.instagram.com/santi_rl2/?utm_source=ig_web_button_share_sheet" target="_blank" class="pagina-dev">Dev Santiago</a>
+    <a href="https://santirivera-oss.github.io/Web-Finanzas-E-inversiones" target="_blank" class="pagina-dev">Dev Santiago</a>
     <br><br>
     <p>© CBTIS No.001 Fresnillo - Todos los derechos reservados.</p>
     <br>
@@ -173,3 +153,17 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+<?php
+
+  if(isset($_POST['enviar'])){
+      
+      $nombre = $_POST['nombre'];
+      $correo = $_POST['correo'];
+      $mensaje = $_POST['mensaje'];
+      
+      $insertar = "INSERT INTO datos Values ('$nombre','$correo','$mensaje','')";
+      
+      $coneccion = mysqli_query($coneccion,$insertar);
+  }
+?>
